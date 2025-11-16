@@ -1,0 +1,22 @@
+﻿@model List<FoodDeliveryApp.Models.Restaurant>
+
+<h2>Restaurants</h2>
+
+<table border="1" cellpadding="5">
+    <tr>
+        <th>Name</th>
+        <th>Location</th>
+        <th>View Menu</th>
+    </tr>
+
+    @foreach (var r in Model)
+    {
+        <tr>
+            <td>@r.Name</td>
+            <td>@r.Location</td>
+            <td>
+                <a href="/Restaurant/Menu/@r.RestaurantId">View Menu</a>
+            </td>
+        </tr>
+    }
+</table>

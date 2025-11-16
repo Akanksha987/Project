@@ -1,0 +1,20 @@
+﻿@model List<FoodDeliveryApp.Models.MenuItem>
+
+<h2>Menu</h2>
+
+<table border="1" cellpadding="5">
+    <tr>
+        <th>Item</th>
+        <th>Price</th>
+        <th>Add to Cart</th>
+    </tr>
+
+    @foreach (var m in Model)
+    {
+        <tr>
+            <td>@m.ItemName</td>
+            <td>₹@m.Price</td>
+            <td><a href="/Cart/Index">Add</a></td>
+        </tr>
+    }
+</table>
